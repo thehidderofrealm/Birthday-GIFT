@@ -1577,3 +1577,61 @@ transform:translateY(0);
     }
 
 }
+#introPage{
+    position: fixed;
+    inset: 0;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: #000;
+
+    z-index: 2147483647;
+
+    cursor: pointer;
+
+    pointer-events: auto;
+}
+
+.introContent{
+
+    text-align:center;
+
+    color:white;
+    pointer-events: none;
+}
+
+.introContent h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+    font-family:'Dancing Script',cursive;
+
+    color:#ff5d94;
+
+    animation:pulseText 2s infinite;
+
+}
+
+.introContent p{
+
+    font-size:24px;
+
+    opacity:.85;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+@keyframes pulseText{
+
+50%{
+
+transform:scale(1.06);
+
+}
+
+}
