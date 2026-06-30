@@ -1686,3 +1686,12 @@ transform:scale(1.06);
     }
 
 }
+#giftBtn,
+#btnTannu,
+#confettiBtn,
+#musicBtn{
+
+    font-family: "Dancing Script", cursive;
+    font-size: 20px;
+    font-weight: 700;
+}
