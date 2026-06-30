@@ -1667,3 +1667,22 @@ transform:scale(1.06);
     font-size:18px;
 
 }
+#letterText::after{
+
+    content:"|";
+
+    animation:blink .8s infinite;
+
+    color:white;
+
+}
+
+@keyframes blink{
+
+    50%{
+
+        opacity:0;
+
+    }
+
+}
