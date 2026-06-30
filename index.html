@@ -111,18 +111,18 @@
                             <i class="fa-regular fa-envelope"></i>
                         </div>
                     </button>
-                    <button id="confettiBtn">
-                        🎉 Celebrate    
+                    <button id="giftBtn">
+                        🎁 Open My Gift
                     </button>
                     <button id="btnTannu">
                         💖 Click Here Tannu
                     </button>
-                    <button id="musicBtn">
-                        <i class="fa-solid fa-music">
-                        </i>
+                    <button id="confettiBtn">
+                        🎉 Celebrate    
                     </button>
-                    <button id="giftBtn">
-                        🎁 Open My Gift
+                    <button id="musicBtn">
+                        <i id="musicIcon" class="fa-solid fa-music"></i>
+                            Music
                     </button>
 
                 </div>
@@ -416,7 +416,7 @@ document.getElementById("btnTannu").addEventListener("click", function () {
 
     musicBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
 
-    musicBtn.style.animation = "rotateMusic 3s linear infinite";
+    musicIcon.style.animation = "rotateMusic 3s linear infinite";
 
     startFireworks();
 
@@ -445,7 +445,7 @@ musicBtn.addEventListener("click", function () {
 
     musicBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
 
-    musicBtn.style.animation = "rotateMusic 3s linear infinite";
+    musicIcon.style.animation = "rotateMusic 3s linear infinite";
 
 } else {
 
@@ -605,7 +605,7 @@ document.getElementById("finalWish").onclick = function(){
     alert("Happy Birthday ❤️\n\nMy love. You are a very special girl. I always silently thank you for coming into my life. Today, I wish you all the best, lots of health, and lots of joy. I always hope we will celebrate many more birthdays like this together. Happy birthday to you. Baby💕 🌹");
 
 };
-const birthday = new Date(2026, 5, 30, 20, 44, 0);
+const birthday = new Date(2026, 6, 1, 0, 0, 0);
 function updateCountdown(){
 
     const now = new Date();
@@ -656,7 +656,7 @@ introPage.addEventListener("click", function () {
     music.play().catch(console.error);
 
     musicBtn.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
-    musicBtn.style.animation = "rotateMusic 3s linear infinite";
+    musicIcon.style.animation = "rotateMusic 3s linear infinite";
 
     introPage.style.opacity = "0";
 
@@ -667,7 +667,7 @@ introPage.addEventListener("click", function () {
     }, 700);
 
 });
-
+const musicIcon = document.getElementById("musicIcon");
 </script>
 
 </html>
