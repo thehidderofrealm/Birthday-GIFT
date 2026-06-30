@@ -205,7 +205,7 @@
                 <div class="card2">
                     <div class="card2-content">
                         <h3>To You!</h3>
-                        <h2>Happy birthday 🥳🎂🥳 chanda the day you come into my life I was not really much attached to
+                        <h2 id="letterText">Happy birthday 🥳🎂🥳 chanda the day you come into my life I was not really much attached to
                             you but day by day you became close to my heart . And now you are truly someone in my life i 
                             could never loose. I wish I could remove some of the pain from your life which you are bearing 
                             alone. But you're always welcome 🤗 you can talk anytime you want to talk specially those which 
@@ -390,9 +390,16 @@
     let boxmail = document.querySelector('.boxMail')
     var close = document.querySelector('.fa-xmark')
     mailBox.onclick = function () {
-        mailBox.classList.toggle('active')
-        boxmail.classList.add('active')
-    }
+
+    mailBox.classList.toggle("active");
+
+    boxmail.classList.add("active");
+
+    letter.innerHTML = "";
+
+    setTimeout(typeLetter,1200);
+
+}
 
     close.addEventListener('click', function () {
         boxmail.classList.remove('active')
@@ -668,6 +675,33 @@ introPage.addEventListener("click", function () {
 
 });
 const musicIcon = document.getElementById("musicIcon");
+const letter = document.getElementById("letterText");
+
+const fullMessage = letter.innerHTML;
+
+letter.innerHTML = "";
+
+function typeLetter(){
+
+    let i = 0;
+
+    const typing = setInterval(() => {
+
+        if(i < fullMessage.length){
+
+            letter.innerHTML += fullMessage.charAt(i);
+
+            i++;
+
+        }else{
+
+            clearInterval(typing);
+
+        }
+
+    },30);
+
+}
 </script>
 
 </html>
