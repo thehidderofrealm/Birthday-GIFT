@@ -72,12 +72,27 @@ body {
     width: 60%;
 }
 .left .btn{
-    transform: scale(0);
-    animation: scaleCricle 2s 16s forwards ease-in-out;
+
+    margin-top:35px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,220px);
+
+    gap:18px;
+
+    justify-content:center;
+
+    align-items:center;
+
+    transform:scale(0);
+
+    animation:scaleCricle 2s 16s forwards ease-in-out;
+
 }
 #btn__letter{
     position: relative;
-    margin-top: 30px;
+    margin-top:0;
     background-color: var(--color-text-pink);
     outline: none;
     padding: 5px 15px;
@@ -92,7 +107,11 @@ body {
     z-index: 2;
     transform: scale(1);
     transition: all .5s ease-in-out;
+    grid-column:1 / 3;
+    width:100%;
+    height:60px;
 }
+
 #btn__letter:active{
     transform: scale(0.7);
 }
@@ -110,7 +129,7 @@ body {
     animation: rotateHeart 1s infinite linear;
 }
 #confettiBtn{
-    margin-top:15px;
+    
     padding:10px 25px;
     background:#ff4081;
     color:white;
@@ -119,7 +138,7 @@ body {
     font-size:18px;
     cursor:pointer;
     transition:.3s;
-    margin-left:10px;
+    
 }
 
 #confettiBtn:hover{
@@ -1056,8 +1075,7 @@ body {
 /* ===== TANNU POPUP ===== */
 
 #btnTannu{
-    margin-top:15px;
-    margin-left:10px;
+    
     padding:10px 25px;
     background:#ff5c8a;
     color:white;
@@ -1125,36 +1143,35 @@ body {
 /* ===== Floating Music Button ===== */
 
 #musicBtn{
-    position: fixed;
-    top: 20px;
-    right: 20px;
 
-    width: 60px;
-    height: 60px;
+    width:220px;
 
-    border-radius: 50%;
-    border: none;
+    height:55px;
 
-    background: linear-gradient(135deg,#ff5c8a,#ff2f6d);
-    color: white;
+    border:none;
 
-    font-size: 24px;
+    border-radius:50px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background:linear-gradient(135deg,#ff5c8a,#ff2f6d);
 
-    cursor: pointer;
+    color:white;
 
-    box-shadow: 0 8px 25px rgba(255,0,120,.35);
+    font-size:18px;
 
-    z-index: 99999;
+    cursor:pointer;
 
-    transition: .3s;
+    transition:.3s;
+
+    box-shadow:0 8px 20px rgba(255,90,150,.35);
+
 }
 
 #musicBtn:hover{
-    transform: scale(1.1);
+
+    transform:translateY(-4px);
+
+    box-shadow:0 15px 30px rgba(255,90,150,.55);
+
 }
 
 #musicBtn:hover{
@@ -1284,7 +1301,6 @@ margin-top:20px;
 
 #giftBtn{
 
-margin-top:15px;
 
 padding:12px 25px;
 
@@ -1633,5 +1649,21 @@ transform:translateY(0);
 transform:scale(1.06);
 
 }
+
+}
+#giftBtn,
+#btnTannu,
+#confettiBtn,
+#musicBtn{
+
+    width:220px;
+
+    height:55px;
+
+    margin:0;
+
+    border-radius:50px;
+
+    font-size:18px;
 
 }
